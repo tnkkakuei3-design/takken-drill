@@ -218,7 +218,7 @@ export default function App(){
     setLoading(true);setQuiz(null);setSel(null);setRevealed(false);
     // BUG-001 FIX: AI生成はCORSエラーのため無効化。常にプリセット問題を使用する。
     // BUG-002 FIX: aiMode=false(弱点優先)の場合に弱点データなしフラグを確認する。
-    const p=getWeightedPreset(catId,history,!aiMode);
+    const p=getWeightedPreset(catId,history,aiMode);
     if(p&&p.__noWeakness){
       setQuiz({__noWeakness:true});
       setLoading(false);return;

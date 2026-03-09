@@ -1,11 +1,11 @@
 const CACHE_NAME = 'takken-drill-v1';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/apple-touch-icon.png',
+  '/takken-drill/',
+  '/takken-drill/index.html',
+  '/takken-drill/manifest.json',
+  '/takken-drill/icon-192.png',
+  '/takken-drill/icon-512.png',
+  '/takken-drill/apple-touch-icon.png',
 ];
 
 // インストール時: 静的アセットをキャッシュ
@@ -68,7 +68,7 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       }).catch(() => {
         // オフライン時はindex.htmlを返す（SPAのフォールバック）
-        return caches.match('/index.html');
+        return caches.match('/takken-drill/index.html');
       });
     })
   );

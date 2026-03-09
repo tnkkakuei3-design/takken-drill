@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 
     <!-- PWA: manifest -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/takken-drill/manifest.json" />
 
     <!-- PWA: theme color -->
     <meta name="theme-color" content="#09090B" />
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="宅建ドリル" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/takken-drill/apple-touch-icon.png" />
 
     <!-- SEO -->
     <meta name="description" content="宅建試験対策AIドリル - 弱点分析・OX一問一答・暗記カード・学習プランナー" />
@@ -32,7 +32,7 @@
       // Service Worker の登録
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register('/takken-drill/sw.js')
             .then((registration) => {
               console.log('[SW] 登録成功:', registration.scope);
             })

@@ -24,6 +24,11 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { background: #09090B; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+      @media (display-mode: standalone) {
+        body {
+          padding-top: env(safe-area-inset-top, 20px);
+        }
+      }
     </style>
   </head>
   <body>

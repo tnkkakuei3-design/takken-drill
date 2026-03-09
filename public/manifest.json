@@ -1,0 +1,26 @@
+{
+  "name": "宅建ドリル",
+  "short_name": "宅建ドリル",
+  "description": "宅建試験対策AIドリル - 弱点分析・OX一問一答・暗記カード・学習プランナー",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09090B",
+  "theme_color": "#09090B",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

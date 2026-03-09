@@ -187,6 +187,21 @@ function Pill({children,active,onClick,t:th}){return <button onClick={onClick} s
 /* ═══ MAIN APP ═══ */
 export default function App(){
   const[mode,setMode]=useState(()=>LS.get("mode","dark"));
+
+  // テーマ切り替え時に meta theme-color を更新
+  useEffect(() => {
+    const themeColor = mode === "dark" ? "#09090B" : "#F8F8FA";
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", themeColor);
+    }
+    // iOS Safari 用のステータスバー設定（ダーク時は black-translucent、ライト時は default）
+    const metaStatus = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    if (metaStatus) {
+      metaStatus.setAttribute("content", mode === "dark" ? "black-translucent" : "default");
+    }
+  }, [mode]);
+
   const[screen,setScreen]=useState("home");
   const[cat,setCat]=useState(null);
   const[diff,setDiff]=useState(()=>LS.get("diff","standard"));

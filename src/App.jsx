@@ -186,7 +186,7 @@ function Pill({children,active,onClick,t:th}){return <button onClick={onClick} s
 
 /* ═══ MAIN APP ═══ */
 export default function App(){
-  const[mode,setMode]=useState(()=>LS.get("mode","dark"));
+  const[mode,setMode]=useState(()=>LS.get("mode","light"));
 
   // テーマ切り替え時に meta theme-color を更新
   useEffect(() => {

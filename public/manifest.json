@@ -6,6 +6,8 @@
   "scope": "/takken-drill/",
   "display": "standalone",
   "orientation": "portrait",
+  "theme_color": "#F8F8FA",
+  "background_color": "#F8F8FA",
 
   "lang": "ja",
   "icons": [
